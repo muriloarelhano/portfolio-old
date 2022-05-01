@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button, HStack } from "@chakra-ui/react";
+import ColorModeToggle from "./ColorModeToggle";
 
 const links = [
   {
@@ -33,6 +34,7 @@ export const Menu: React.FunctionComponent = () => {
           {value.name}
         </Link>
       ))}
+      <ColorModeToggle />
       <Button rounded={"full"}>Contact Me</Button>
     </HStack>
   );
