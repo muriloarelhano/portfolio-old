@@ -1,11 +1,9 @@
 import {
   Button,
   Container,
-  Grid,
   Heading,
   HStack,
   Image,
-  Link,
   Text,
   useColorModeValue,
   VStack,
@@ -16,12 +14,12 @@ import BannerImage from "../../public/banner-image.png";
 export const Banner = () => {
   return (
     <Container maxW={"full"} bg={useColorModeValue("gray.100", "gray.700")}>
-      <Container maxW={"container.lg"}>
-        <Grid
+      <Container maxW={"container.lg"} py={4}>
+        <HStack
           gap={4}
-          gridTemplateColumns={{
-            sm: "1fr",
-            lg: "minmax(300px, 1.2fr) minmax(300px, 2fr)",
+          wrap={{
+            sm: "wrap",
+            lg: "nowrap",
           }}
           justifyContent={"space-between"}
           alignItems={"center"}
@@ -53,7 +51,7 @@ export const Banner = () => {
             </HStack>
           </VStack>
           <Image src={BannerImage.src} alt="" transform={"translateY(50px)"} />
-        </Grid>
+        </HStack>
       </Container>
     </Container>
   );
