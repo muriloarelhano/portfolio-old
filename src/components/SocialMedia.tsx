@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Link, VStack } from "@chakra-ui/react";
+import { Box, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 
 export const SocialMedia: React.FunctionComponent = () => {
@@ -15,7 +15,12 @@ export const SocialMedia: React.FunctionComponent = () => {
         <Link href="https://www.facebook.com/murilo.arelhano">
           <BsFacebook />
         </Link>
-        <Box position={"relative"} bgColor={"black"} height={"80"} width={1} />
+        <Box
+          position={"relative"}
+          bgColor={useColorModeValue("black", "white")}
+          height={"80"}
+          width={1}
+        />
       </VStack>
     </Box>
   );
