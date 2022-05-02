@@ -14,11 +14,15 @@ import BannerImage from "../../public/banner-image.png";
 export const Banner = () => {
   return (
     <Container maxW={"full"} bg={useColorModeValue("gray.100", "gray.700")}>
-      <Container maxW={"container.lg"} py={4}>
+      <Container
+        maxW={"container.lg"}
+        py={4}
+        textAlign={{ base: "center", lg: "left" }}
+      >
         <HStack
           gap={4}
           wrap={{
-            sm: "wrap",
+            base: "wrap",
             lg: "nowrap",
           }}
           justifyContent={"space-between"}
@@ -34,7 +38,14 @@ export const Banner = () => {
               NodeJs, ReactJs, Typescript, micro services, cloud infrastructure,
               DevOps and information security.
             </Text>
-            <HStack gap={4}>
+            <HStack
+              gap={4}
+              wrap={{
+                base: "wrap",
+                md: "nowrap",
+              }}
+              justify={'center'}
+            >
               <Button
                 size={"lg"}
                 onClick={() => {
@@ -44,7 +55,6 @@ export const Banner = () => {
                 Go To Github{" "}
                 <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
               </Button>
-
               <Button variant={"ghost"} size={"lg"}>
                 Download | CV
               </Button>
