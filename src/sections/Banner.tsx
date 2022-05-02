@@ -4,14 +4,17 @@ import {
   Heading,
   HStack,
   Image,
+  Link,
   Text,
+  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
+import { BsGithub } from "react-icons/bs";
 import BannerImage from "../../public/banner-image.png";
 
 export const Banner = () => {
   return (
-    <Container maxW={"full"} bg={"gray.100"}>
+    <Container maxW={"full"} bg={useColorModeValue("gray.100", "gray.700")}>
       <Container maxW={"container.lg"}>
         <HStack>
           <VStack gap={4}>
@@ -25,8 +28,19 @@ export const Banner = () => {
               DevOps and information security.
             </Text>
             <HStack gap={4}>
-              <Button>Go To Github</Button>
-              <Button>Download | CV</Button>
+              <Button
+                size={"lg"}
+                onClick={() => {
+                  window.location.href = "https://github.com/muriloarelhano";
+                }}
+              >
+                Go To Github{" "}
+                <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
+              </Button>
+
+              <Button variant={"ghost"} size={"lg"}>
+                Download | CV
+              </Button>
             </HStack>
           </VStack>
           <Image src={BannerImage.src} alt="" transform={"translateY(50px)"} />
