@@ -4,6 +4,7 @@ import {
   Heading,
   HStack,
   Image,
+  Link,
   Text,
   useColorModeValue,
   VStack,
@@ -44,17 +45,15 @@ export const Banner = () => {
                 base: "wrap",
                 md: "nowrap",
               }}
-              justify={'center'}
+              justify={"center"}
             >
-              <Button
-                size={"lg"}
-                onClick={() => {
-                  window.location.href = "https://github.com/muriloarelhano";
-                }}
-              >
-                Go To Github{" "}
-                <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
-              </Button>
+              <Link href="https://github.com/muriloarelhano">
+                <Button size={"lg"}>
+                  Go To Github{" "}
+                  <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
+                </Button>
+              </Link>
+
               <Button variant={"ghost"} size={"lg"}>
                 Download | CV
               </Button>

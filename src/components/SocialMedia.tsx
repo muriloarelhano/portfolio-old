@@ -4,7 +4,7 @@ import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 
 export const SocialMedia: React.FunctionComponent = () => {
   return (
-    <Box position={"absolute"} left={20} bottom={0}>
+    <Box position={"fixed"} left={20} bottom={0}>
       <VStack fontSize={30} gap={4}>
         <Link href="https://github.com/muriloarelhano">
           <BsGithub />

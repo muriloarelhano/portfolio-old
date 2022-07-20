@@ -6,7 +6,7 @@ export const Header: React.FunctionComponent = () => {
   return (
     <Container maxW={"container.lg"}>
       <HStack justify={"space-between"} py={5}>
-        <Heading size={'lg'}>Murilo Arelhano</Heading>
+        <Heading size={"lg"}>Murilo Arelhano</Heading>
         <NavBar />
       </HStack>
     </Container>
