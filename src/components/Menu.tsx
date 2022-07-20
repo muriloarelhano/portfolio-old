@@ -4,8 +4,8 @@ import {
   HStack,
   IconButton,
   Stack,
-  Link,
   useColorModeValue,
+  Link as ChakraLink,
   useDisclosure,
   Button,
   useColorMode,
@@ -14,32 +14,27 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import Link from "next/link";
 
-const Links = [
+type LinkType = { name: string; path: string };
+
+const Links: LinkType[] = [
   {
     name: "Home",
-    path: "home",
+    path: "",
   },
   {
-    name: "About",
-    path: "about",
+    name: "Resume",
+    path: "resume",
   },
   {
     name: "Skills",
     path: "skills",
   },
-  {
-    name: "Projects",
-    path: "projects",
-  },
-  {
-    name: "Blog",
-    path: "blog",
-  },
 ];
 
-const NavLink: React.FunctionComponent<any> = ({ children }) => (
-  <Link
+const NavLink: React.FC<LinkType> = ({ path, name }) => (
+  <ChakraLink
     py={1}
     px={2}
     rounded={"md"}
@@ -47,10 +42,9 @@ const NavLink: React.FunctionComponent<any> = ({ children }) => (
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
   >
-    {children}
-  </Link>
+    <Link href={path}>{children}</Link>
+  </ChakraLink>
 );
 
 export const NavBar = () => {
@@ -69,9 +63,11 @@ export const NavBar = () => {
         />
         <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
           {Links.map((link: any) => (
-            <NavLink key={link.name}>{link.name}</NavLink>
+            <NavLink key={link.name} path={link.path}>
+              {link.name}
+            </NavLink>
           ))}
-          <Button onClick={toggleColorMode} colorScheme={'gray'}>
+          <Button onClick={toggleColorMode} colorScheme={"gray"}>
             {colorMode === "light" ? <BsFillSunFill /> : <BsFillMoonFill />}
           </Button>
           <Button rounded={"full"}>Contact</Button>
