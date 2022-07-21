@@ -12,7 +12,6 @@ export const Skill: React.FC<SkillProps> = ({ level, title }) => {
       <Heading size={"sm"}>{title}</Heading>
       <HStack>
         {Array.from(Array(5)).map((el, index) => {
-          console.log(index);
           return (
             <Box
               borderRadius={"md"}
