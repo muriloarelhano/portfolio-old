@@ -10,7 +10,10 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
+import ResumePage from "../../pages/resume";
 import BannerImage from "../../public/banner-image.png";
+import { ResumeHeader } from "../components/resume/ResumeHeader";
+import { reactToPdf } from "../utils/pdf";
 
 export const Banner = () => {
   return (
@@ -54,7 +57,11 @@ export const Banner = () => {
                 </Button>
               </Link>
 
-              <Button variant={"ghost"} size={"lg"}>
+              <Button
+                variant={"ghost"}
+                size={"lg"}
+                onClick={() => reactToPdf("curriculo", <ResumeHeader />)}
+              >
                 Download | CV
               </Button>
             </HStack>

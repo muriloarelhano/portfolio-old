@@ -3,6 +3,7 @@ import {
   chakra,
   Container,
   Heading,
+  HStack,
   Link,
   Stack,
   Text,
@@ -50,21 +51,6 @@ export default function Footer() {
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container
-        as={Stack}
-        maxW={"6xl"}
-        py={4}
-        spacing={4}
-        justify={"center"}
-        align={"center"}
-      >
-        <Heading size={"lg"}>Murilo Arelhano</Heading>
-        <Stack direction={"row"} spacing={6}>
-          <Link href={"/"}>Home</Link>
-          <Link href={"resume"}>Resume</Link>
-        </Stack>
-      </Container>
-
       <Box
         borderTopWidth={1}
         borderStyle={"solid"}
@@ -79,8 +65,17 @@ export default function Footer() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© {new Date(Date.now()).getFullYear()}</Text>
-          <Stack direction={"row"} spacing={6}>
+          <HStack align={"center"} justify={"center"}>
+            <Heading size={"lg"} mr={10}>
+              Murilo Arelhano
+            </Heading>
+            <Stack direction={"row"} spacing={6}>
+              <Link href={"/"}>Home</Link>
+              <Link href={"resume"}>Resume</Link>
+            </Stack>
+          </HStack>
+          <Stack direction={"row"} align={"center"} spacing={6}>
+            <Text>© {new Date(Date.now()).getFullYear()}</Text>
             <SocialButton
               label={"GitHub"}
               href={"https://github.com/muriloarelhano"}

@@ -6,7 +6,7 @@ import { ResumeSkills } from "../src/components/resume/ResumeSkills";
 import Footer from "../src/sections/Footer";
 import { Header } from "../src/sections/Header";
 
-const ResumePage = () => {
+const ResumePage: React.FC = () => {
   return (
     <>
       <Header />
@@ -19,7 +19,7 @@ const ResumePage = () => {
           gap={1}
         >
           <GridItem
-            background={useColorModeValue("gray.100", "purple.600")}
+            background={useColorModeValue("gray.100", "gray.700")}
             area={"header"}
             borderRadius={"md"}
           >
