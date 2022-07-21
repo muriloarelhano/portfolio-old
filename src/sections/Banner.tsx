@@ -9,11 +9,10 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
+import { useRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
-import ResumePage from "../../pages/resume";
+import { useReactToPrint } from "react-to-print";
 import BannerImage from "../../public/banner-image.png";
-import { ResumeHeader } from "../components/resume/ResumeHeader";
-import { reactToPdf } from "../utils/pdf";
 
 export const Banner = () => {
   return (
@@ -32,7 +31,7 @@ export const Banner = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <VStack gap={4}>
+          <VStack gap={4} minW={"35%"} align={{ lg: "start" }}>
             <Heading fontSize={"4xl"} fontWeight={"bold"}>
               Hi There!👋 I’m Murilo Arelhano
             </Heading>
@@ -57,13 +56,9 @@ export const Banner = () => {
                 </Button>
               </Link>
 
-              <Button
-                variant={"ghost"}
-                size={"lg"}
-                onClick={() => reactToPdf("curriculo", <ResumeHeader />)}
-              >
+              {/* <Button variant={"ghost"} size={"lg"}>
                 Download | CV
-              </Button>
+              </Button> */}
             </HStack>
           </VStack>
           <Image src={BannerImage.src} alt="" transform={"translateY(50px)"} />
