@@ -2,6 +2,8 @@ import { SkillCard } from "../components/SkillCard";
 import { Container, Heading, Stack, theme } from "@chakra-ui/react";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiGo, SiRust } from "react-icons/si";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const skills = [
   {
@@ -48,11 +50,36 @@ const skills = [
   },
 ];
 
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 export const SkillsSection = () => {
   return (
-    <Container maxW={"container.lg"} py={10}>
+    <Container maxW={"container.lg"} py={10} mb={10}>
       <Heading mb={10}>My Skills</Heading>
-      <Stack direction={"row"} overflow={"hidden"}>
+      <Carousel
+        responsive={responsive}
+        autoPlaySpeed={6000}
+        autoPlay={true}
+        infinite={true}
+      >
         {skills.map((skill) => (
           <SkillCard
             key={skill.title}
@@ -63,7 +90,7 @@ export const SkillsSection = () => {
             Icon={skill.Icon}
           />
         ))}
-      </Stack>
+      </Carousel>
     </Container>
   );
 };

@@ -4,52 +4,47 @@ import {
   HStack,
   IconButton,
   Stack,
-  Link,
   useColorModeValue,
+  Link as ChakraLink,
   useDisclosure,
   Button,
   useColorMode,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import Link from "next/link";
 
-const Links = [
+interface LinkType extends PropsWithChildren {
+  name: string;
+  path: string;
+}
+
+const Links: LinkType[] = [
   {
     name: "Home",
-    path: "home",
+    path: "/",
   },
   {
-    name: "About",
-    path: "about",
-  },
-  {
-    name: "Skills",
-    path: "skills",
-  },
-  {
-    name: "Projects",
-    path: "projects",
-  },
-  {
-    name: "Blog",
-    path: "blog",
+    name: "Resume",
+    path: "/resume",
   },
 ];
 
-const NavLink: React.FunctionComponent<any> = ({ children }) => (
-  <Link
-    py={1}
-    px={2}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-  >
-    {children}
+const NavLink: React.FC<LinkType> = ({ name, path }) => (
+  <Link href={path}>
+    <ChakraLink
+      py={1}
+      px={2}
+      rounded={"md"}
+      _hover={{
+        textDecoration: "none",
+        bg: useColorModeValue("gray.200", "gray.700"),
+      }}
+    >
+      {name}
+    </ChakraLink>
   </Link>
 );
 
@@ -69,9 +64,9 @@ export const NavBar = () => {
         />
         <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
           {Links.map((link: any) => (
-            <NavLink key={link.name}>{link.name}</NavLink>
+            <NavLink key={link.name} name={link.name} path={link.path} />
           ))}
-          <Button onClick={toggleColorMode} colorScheme={'gray'}>
+          <Button onClick={toggleColorMode} colorScheme={"gray"}>
             {colorMode === "light" ? <BsFillSunFill /> : <BsFillMoonFill />}
           </Button>
           <Button rounded={"full"}>Contact</Button>
@@ -82,7 +77,11 @@ export const NavBar = () => {
         <Box pb={4} display={{ md: "none" }}>
           <Stack as={"nav"} spacing={4}>
             {Links.map((link) => (
-              <NavLink key={link.name}>{link.name}</NavLink>
+              <NavLink
+                key={link.name}
+                name={link.name}
+                path={link.path}
+              ></NavLink>
             ))}
           </Stack>
         </Box>

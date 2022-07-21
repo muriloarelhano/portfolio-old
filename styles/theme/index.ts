@@ -1,4 +1,8 @@
-import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import {
+  extendTheme,
+  GlobalStyle,
+  withDefaultColorScheme,
+} from "@chakra-ui/react";
 import { ComponentThemes } from "./components";
 
 const config = {
@@ -9,6 +13,12 @@ const config = {
 export const theme = extendTheme(
   { config },
   {
+    styles: {
+      ...GlobalStyle,
+      global: {
+        svg: { display: "inline" },
+      },
+    },
     components: {
       ...ComponentThemes,
     },

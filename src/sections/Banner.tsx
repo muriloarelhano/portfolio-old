@@ -4,12 +4,16 @@ import {
   Heading,
   HStack,
   Image,
+  Link,
   Text,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
+import ResumePage from "../../pages/resume";
 import BannerImage from "../../public/banner-image.png";
+import { ResumeHeader } from "../components/resume/ResumeHeader";
+import { reactToPdf } from "../utils/pdf";
 
 export const Banner = () => {
   return (
@@ -44,18 +48,20 @@ export const Banner = () => {
                 base: "wrap",
                 md: "nowrap",
               }}
-              justify={'center'}
+              justify={"center"}
             >
+              <Link href="https://github.com/muriloarelhano">
+                <Button size={"lg"}>
+                  Go To Github{" "}
+                  <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
+                </Button>
+              </Link>
+
               <Button
+                variant={"ghost"}
                 size={"lg"}
-                onClick={() => {
-                  window.location.href = "https://github.com/muriloarelhano";
-                }}
+                onClick={() => reactToPdf("curriculo", <ResumeHeader />)}
               >
-                Go To Github{" "}
-                <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
-              </Button>
-              <Button variant={"ghost"} size={"lg"}>
                 Download | CV
               </Button>
             </HStack>
