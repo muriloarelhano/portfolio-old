@@ -3,7 +3,7 @@ import React from "react";
 import { Education, EducationProps } from "./Education";
 import { Experience, ExperienceProps } from "./Experience";
 
-export const ResumeMainInfos: React.FC = () => {
+export const ResumeMainInfos = () => {
   return (
     <VStack align={"start"} p={5} gap={2}>
       <Heading size={"lg"}>Perfil</Heading>
@@ -30,7 +30,7 @@ export const ResumeMainInfos: React.FC = () => {
       ))}
 
       <Divider></Divider>
-      
+
       <Heading size={"lg"}>Experiencia Profissional</Heading>
       {EXPERIENCE.map((item, index) => (
         <Experience
