@@ -6,7 +6,7 @@ interface SkillCardProps {
   description: string;
   color: any;
   backgroundColor: string;
-  Icon: IconType
+  Icon: IconType;
 }
 
 export const SkillCard: React.FunctionComponent<SkillCardProps> = ({
@@ -17,16 +17,7 @@ export const SkillCard: React.FunctionComponent<SkillCardProps> = ({
   Icon,
 }) => {
   return (
-    <HStack
-      gap={4}
-      p={3}
-      align={"start"}
-      maxW={80}
-      minW={80}
-      border="1px"
-      borderColor={"gray.200"}
-      rounded={"md"}
-    >
+    <HStack>
       <Box
         bg={backgroundColor}
         display={"flex"}

@@ -1,23 +1,16 @@
 import { Container, Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
-import { useRef } from "react";
-import { useReactToPrint } from "react-to-print";
-import { ResumeHeader } from "../src/components/resume/ResumeHeader";
-import { ResumeMainInfos } from "../src/components/resume/ResumeMainInfos";
-import { ResumeProfileInfos } from "../src/components/resume/ResumeProfileInfos";
-import { ResumeSkills } from "../src/components/resume/ResumeSkills";
-import Footer from "../src/sections/Footer";
-import { Header } from "../src/sections/Header";
+import Footer from "../src/components/Footer";
+import { Header } from "../src/components/Header";
+import { ResumeHeader } from "../src/components/ResumePage/ResumeHeader";
+import { ResumeMainInfos } from "../src/components/ResumePage/ResumeMainInfos";
+import { ResumeProfileInfos } from "../src/components/ResumePage/ResumeProfileInfos";
+import { ResumeSkills } from "../src/components/ResumePage/ResumeSkills";
 
 const ResumePage: React.FC = () => {
-  const resumeRef = useRef<HTMLDivElement>(null);
-  const handlePrint = useReactToPrint({
-    content: () => resumeRef.current,
-  });
   return (
     <>
-      <style>{getPageMargins()}</style>
       <Header />
-      <Container maxW={"container.lg"} mb={10} ref={resumeRef}>
+      <Container maxW={"container.xl"} mb={10}>
         <Grid
           templateAreas={`"header header"
                   "info info"
@@ -28,28 +21,28 @@ const ResumePage: React.FC = () => {
           <GridItem
             background={useColorModeValue("gray.100", "gray.700")}
             area={"header"}
-            borderRadius={"md"}
+            borderRadius={"base"}
           >
-            <ResumeHeader handler={handlePrint} />
+            <ResumeHeader />
           </GridItem>
           <GridItem
             bg={useColorModeValue("gray.100", "gray.700")}
             area={"info"}
-            borderRadius={"md"}
+            borderRadius={"base"}
           >
             <ResumeProfileInfos />
           </GridItem>
           <GridItem
             bg={useColorModeValue("gray.100", "gray.700")}
             area={"main"}
-            borderRadius={"md"}
+            borderRadius={"base"}
           >
             <ResumeMainInfos />
           </GridItem>
           <GridItem
             bg={useColorModeValue("gray.100", "gray.700")}
             area={"nav"}
-            borderRadius={"md"}
+            borderRadius={"base"}
           >
             <ResumeSkills />
           </GridItem>

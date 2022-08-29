@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
-import { Header } from "../src/sections/Header";
-import { Banner } from "../src/sections/Banner";
-import { SocialMedia } from "../src/components/SocialMedia";
-import { SkillsSection } from "../src/sections/SkillsSection";
-import Footer from "../src/sections/Footer";
+import Footer from "../src/components/Footer";
+import { Header } from "../src/components/Header";
+import { Banner } from "../src/components/IndexPage/Banner";
+import { Projects } from "../src/components/IndexPage/Projects";
+import { SkillsSection } from "../src/components/IndexPage/SkillsSection";
+import { SocialMedia } from "../src/components/IndexPage/SocialMedia";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <Banner />
       <SocialMedia />
       <SkillsSection />
+      <Projects />
       <Footer></Footer>
     </>
   );
