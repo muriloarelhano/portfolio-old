@@ -31,7 +31,7 @@ export const ResumeMainInfos = () => {
 
       <Divider></Divider>
 
-      <Heading size={"lg"}>Experiencia Profissional</Heading>
+      <Heading size={"lg"}>Experiência Profissional</Heading>
       {EXPERIENCE.map((item, index) => (
         <Experience
           key={index}
@@ -77,7 +77,7 @@ const EXPERIENCE: ExperienceProps[] = [
     endDate: "Setembro 2021",
   },
   {
-    title: "Jr Desenvolvedor full-stack",
+    title: "Desenvolvedor full-stack",
     employer: "Climatempo",
     activities: [
       "Desenvolvimento completo web services e micros serviços em NodeJs com ExpressJs, no padrão REST API, gRPC e GraphQL.",

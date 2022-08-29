@@ -5,13 +5,13 @@ import {
   Image,
   Tag,
   Text,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { FaPrint } from "react-icons/fa";
 import MyFace from "../../../public/my-face.jpg";
 
-export const ResumeHeader: React.FC<{ handler: any }> = ({ handler }) => {
+export const ResumeHeader: React.FC = () => {
   return (
     <HStack
       minWidth={"100%"}
@@ -39,9 +39,6 @@ export const ResumeHeader: React.FC<{ handler: any }> = ({ handler }) => {
           </HStack>
         </VStack>
       </HStack>
-      <Button variant={"outline"} onClick={handler}>
-        <FaPrint />
-      </Button>
     </HStack>
   );
 };

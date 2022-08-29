@@ -69,7 +69,14 @@ export const NavBar = () => {
           <Button onClick={toggleColorMode} colorScheme={"gray"}>
             {colorMode === "light" ? <BsFillSunFill /> : <BsFillMoonFill />}
           </Button>
-          <Button rounded={"full"}>Contact</Button>
+          <Button
+            rounded={"full"}
+            onClick={() => {
+              window.location.href = "/resume";
+            }}
+          >
+            Contact
+          </Button>
         </HStack>
       </Flex>
 
