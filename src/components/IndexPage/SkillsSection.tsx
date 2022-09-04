@@ -7,46 +7,39 @@ import { SkillCard } from "./SkillCard";
 
 const skills = [
   {
+    title: "Typescript",
+    description: "3 years of experience with Typescript",
+    backgroundColor: theme.colors.blue[600],
+    color: "white",
+    Icon: SiTypescript,
+  },
+  {
     title: "NodeJs",
-    description: "3 years of experience with NodeJs programming",
+    description: "3 years of experience with NodeJs",
     backgroundColor: theme.colors.green[500],
     color: "white",
     Icon: FaNodeJs,
   },
   {
     title: "ReactJS",
-    description: "2 years of experience with React programming",
+    description: "2 years of experience with React",
     backgroundColor: theme.colors.blue[200],
     color: "white",
     Icon: FaReact,
   },
   {
-    title: "Typescript",
-    description: "3 years of experience with Typescript programming",
-    backgroundColor: theme.colors.blue[600],
-    color: "white",
-    Icon: SiTypescript,
-  },
-  {
     title: "NextJs",
-    description: "1 years of experience with NextJs programming",
+    description: "1 year of experience with NextJs",
     backgroundColor: theme.colors.black,
     color: "white",
     Icon: SiNextdotjs,
   },
   {
     title: "Go",
-    description: "I'm studding about GO",
+    description: "Studding about GO",
     backgroundColor: theme.colors.blue[100],
     color: "white",
     Icon: SiGo,
-  },
-  {
-    title: "Rust",
-    description: "I'm studding about Rust",
-    backgroundColor: theme.colors.orange[300],
-    color: "white",
-    Icon: SiRust,
   },
 ];
 
@@ -73,7 +66,7 @@ const responsive = {
 export const SkillsSection = () => {
   return (
     <Container maxW={"container.xl"} py={10} mb={10}>
-      <Heading mb={10}>Skills</Heading>
+      <Heading mb={10}>Main Skills</Heading>
       <Carousel responsive={responsive} autoPlaySpeed={6000} autoPlay infinite>
         {skills.map((skill) => (
           <SkillCard
