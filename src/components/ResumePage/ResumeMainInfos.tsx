@@ -8,12 +8,12 @@ export const ResumeMainInfos = () => {
     <VStack align={"start"} p={5} gap={2}>
       <Heading size={"lg"}>Perfil</Heading>
       <Text size={"lg"}>
-        Passo boa parte do tempo estudando, realmente gosto do que eu faço.
-        Estudo muito sobre a área e também sobre negócios e gestão em geral para
-        melhorar minha comunicação, mas minha principal atividade é desenvolver,
-        tenho muita facilidade em aprender tecnologias novas. Tenho foco em
-        aplicações web, sou bem comunicativo e me preocupo com a qualidade do
-        meu trabalho.
+        Sou desenvolvedor full-stack, formado em sistema de informação, tenho
+        experiência com NodeJs, React e Typescript, além de várias outras
+        ferramentas conhecidas no mercado e outras linguagens como GO e .Net,
+        estou trabalhando com o desenvolvimento microsserviços, infraestrutura
+        em nuvem e DevOps, também gosto e estudo sobre outras áreas como
+        segurança e desenvolvimento de games.
       </Text>
 
       <Divider></Divider>

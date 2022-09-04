@@ -17,7 +17,7 @@ export const SkillCard: React.FunctionComponent<SkillCardProps> = ({
   Icon,
 }) => {
   return (
-    <HStack>
+    <HStack align={'start'}>
       <Box
         bg={backgroundColor}
         display={"flex"}
@@ -30,7 +30,7 @@ export const SkillCard: React.FunctionComponent<SkillCardProps> = ({
       >
         <Icon size={45} />
       </Box>
-      <VStack align={"start"}>
+      <VStack align={"start"} justify={"start"}>
         <Heading size={"md"}>{title}</Heading>
         <Text>{description}</Text>
       </VStack>

@@ -54,7 +54,12 @@ export const Banner = () => {
               </Link>
             </HStack>
           </VStack>
-          <Image src={BannerImage.src} alt="" transform={"translateY(50px)"} />
+          <Image
+            src={BannerImage.src}
+            alt=""
+            transform={"translateY(70px)"}
+            maxW={"2xl"}
+          />
         </HStack>
       </Container>
     </Container>
