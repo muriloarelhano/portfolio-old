@@ -3,7 +3,7 @@ import Footer from "../src/components/Footer";
 import { Header } from "../src/components/Header";
 import { Banner } from "../src/components/IndexPage/Banner";
 import { Projects } from "../src/components/IndexPage/Projects";
-import { SkillsSection } from "../src/components/IndexPage/SkillsSection";
+import { Skills } from "../src/components/IndexPage/Skills";
 import { SocialMedia } from "../src/components/IndexPage/SocialMedia";
 
 const Home: NextPage = () => {
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Header />
       <Banner />
       <SocialMedia />
-      <SkillsSection />
+      <Skills />
       <Projects />
       <Footer></Footer>
     </>

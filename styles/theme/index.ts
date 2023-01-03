@@ -1,30 +1,17 @@
-import {
-  extendTheme,
-  GlobalStyle,
-  withDefaultColorScheme,
-} from "@chakra-ui/react";
+import { extendTheme, GlobalStyle } from "@chakra-ui/react";
 import { ComponentThemes } from "./components";
 
-const config = {
-  initialColorMode: "light",
-  useSystemColorMode: false,
-};
-
-export const theme = extendTheme(
-  { config },
-  {
-    styles: {
-      ...GlobalStyle,
-      global: {
-        svg: { display: "inline" },
+export const theme = extendTheme({
+  styles: {
+    ...GlobalStyle,
+    global: {
+      svg: { display: "inline" },
+      body: {
+        bg: "111113",
       },
     },
-    components: {
-      ...ComponentThemes,
-    },
   },
-  withDefaultColorScheme({
-    colorScheme: "blue",
-    components: ["Button", "Badge"],
-  })
-);
+  components: {
+    ...ComponentThemes,
+  },
+});

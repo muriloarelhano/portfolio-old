@@ -5,8 +5,10 @@ import { NavBar } from "../components/Menu";
 export const Header: React.FC = () => {
   return (
     <Container maxW={"container.xl"} zIndex={9999}>
-      <HStack justify={"space-between"} py={5}>
-        <Heading size={"lg"}>Murilo Arelhano</Heading>
+      <HStack justify={"space-between"} py={6}>
+        <Heading size={"lg"} fontWeight={"medium"}>
+          Murilo Arelhano
+        </Heading>
         <NavBar />
       </HStack>
     </Container>
