@@ -27,8 +27,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <VStack
       as={motion.div}
       rounded={"md"}
-      border={"1px solid"}
-      borderColor={"gray"}
       _hover={{
         cursor: "pointer",
         shadow: "lg",
@@ -53,7 +51,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         height={"150px"}
         roundedBottom={"md"}
         mt={"0 !important"}
-        bg={useColorModeValue("gray.100", "gray.800")}
       >
         <Heading fontSize={"x-large"}>{title}</Heading>
         <Text>{description}</Text>

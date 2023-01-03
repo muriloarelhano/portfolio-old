@@ -3,8 +3,6 @@ import {
   chakra,
   Container,
   Heading,
-  HStack,
-  Link,
   Stack,
   Text,
   useColorModeValue,
@@ -12,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { NavBar } from "./Menu";
 
 const SocialButton = ({
   children,
@@ -47,50 +46,34 @@ const SocialButton = ({
 
 export default function Footer() {
   return (
-    <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
-    >
-      <Box
-        borderTopWidth={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.700")}
+    <Box borderTopWidth={"0.25px"} borderStyle={"solid"} borderColor={"#323238"}>
+      <Container
+        as={Stack}
+        maxW={"container.xl"}
+        py={4}
+        direction={{ base: "column", md: "row" }}
+        spacing={4}
+        justify={{ base: "center", md: "space-between" }}
+        align={{ base: "center", md: "center" }}
       >
-        <Container
-          as={Stack}
-          maxW={"6xl"}
-          py={4}
-          direction={{ base: "column", md: "row" }}
-          spacing={4}
-          justify={{ base: "center", md: "space-between" }}
-          align={{ base: "center", md: "center" }}
-        >
-          <HStack align={"center"} justify={"center"}>
-            <Heading size={"lg"} mr={10}>
-              Murilo Arelhano
-            </Heading>
-            <Stack direction={"row"} spacing={6}>
-              <Link href={"/"}>Home</Link>
-              <Link href={"resume"}>Resume</Link>
-            </Stack>
-          </HStack>
-          <Stack direction={"row"} align={"center"} spacing={6}>
-            <Text>© {new Date(Date.now()).getFullYear()}</Text>
-            <SocialButton
-              label={"GitHub"}
-              href={"https://github.com/muriloarelhano"}
-            >
-              <FaGithub />
-            </SocialButton>
-            <SocialButton
-              label={"LinkedIn"}
-              href={"https://www.linkedin.com/in/muriloarelhano/"}
-            >
-              <FaLinkedinIn />
-            </SocialButton>
-          </Stack>
-        </Container>
-      </Box>
+        <Heading size={"lg"}>Murilo Arelhano</Heading>
+        <NavBar />
+        <Stack direction={"row"} align={"center"} spacing={6}>
+          <Text>© {new Date(Date.now()).getFullYear()}</Text>
+          <SocialButton
+            label={"GitHub"}
+            href={"https://github.com/muriloarelhano"}
+          >
+            <FaGithub />
+          </SocialButton>
+          <SocialButton
+            label={"LinkedIn"}
+            href={"https://www.linkedin.com/in/muriloarelhano/"}
+          >
+            <FaLinkedinIn />
+          </SocialButton>
+        </Stack>
+      </Container>
     </Box>
   );
 }

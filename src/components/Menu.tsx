@@ -3,44 +3,30 @@ import {
   Flex,
   HStack,
   IconButton,
-  Stack,
-  useColorModeValue,
   Link as ChakraLink,
-  useDisclosure,
-  Button,
-  useColorMode,
+  Stack, useDisclosure
 } from "@chakra-ui/react";
-import React, { PropsWithChildren } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FaTimes } from "react-icons/fa";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import Link from "next/link";
+import React from "react";
+import { FaTimes } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Links } from "../data/links";
 
-interface LinkType extends PropsWithChildren {
+export interface LinkType {
   name: string;
   path: string;
 }
-
-const Links: LinkType[] = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "Resume",
-    path: "/resume",
-  },
-];
 
 const NavLink: React.FC<LinkType> = ({ name, path }) => (
   <Link href={path}>
     <ChakraLink
       py={1}
       px={2}
+      fontWeight={"medium"}
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: "gray.700",
       }}
     >
       {name}
@@ -50,7 +36,6 @@ const NavLink: React.FC<LinkType> = ({ name, path }) => (
 
 export const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
@@ -66,17 +51,6 @@ export const NavBar = () => {
           {Links.map((link: any) => (
             <NavLink key={link.name} name={link.name} path={link.path} />
           ))}
-          <Button onClick={toggleColorMode} colorScheme={"gray"}>
-            {colorMode === "light" ? <BsFillSunFill /> : <BsFillMoonFill />}
-          </Button>
-          <Button
-            rounded={"full"}
-            onClick={() => {
-              window.location.href = "/resume";
-            }}
-          >
-            Contact
-          </Button>
         </HStack>
       </Flex>
 

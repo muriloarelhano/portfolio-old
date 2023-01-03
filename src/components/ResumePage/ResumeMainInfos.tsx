@@ -57,10 +57,23 @@ const EDUCATIONS: EducationProps[] = [
 
 const EXPERIENCE: ExperienceProps[] = [
   {
-    title: "Freelancer Web Developer",
+    title: "Desenvolvedor full-stack",
+    employer: "Callix",
+    activities: ["Desenvolvimento de aplicações web."],
+    startDate: "Setembro 2021",
+    endDate: "Atualmente",
+  },
+  {
+    title: "Desenvolvedor full-stack",
+    employer: "Climatempo",
     activities: [
-      "Criação de websites estáticos para lojas e divulgação com HTML, CSS e Js puros.",
-      "Modificações visuais em aplicações existentes.",
+      "Desenvolvimento completo web services e micros serviços em NodeJs com ExpressJs, no padrão REST API, gRPC e GraphQL.",
+      "Desenvolvimento seguindo padrões arquiteturais como Hexagonal Architecture e SOLID. ",
+      "Criação de pipelines CI/CD e deploy de aplicações em ambiente Kubernetes.",
+      "Criação e modelagem de bancos de dados SQL e NoSQL e integrações.",
+      "Implantação de ferramentas de monitoramento e observabilidade das aplicações, com Grafana, Prometheus, Graylog e Istio.",
+      "Criação de aplicações com uso de filas de mensageira, como RabbitMQ.",
+      "Desenvolvimento de teste de unitários e de integração nas aplicações.",
     ],
     startDate: "Janeiro 2020",
     endDate: "Setembro 2021",
@@ -77,18 +90,12 @@ const EXPERIENCE: ExperienceProps[] = [
     endDate: "Setembro 2021",
   },
   {
-    title: "Desenvolvedor full-stack",
-    employer: "Climatempo",
+    title: "Freelancer Web Developer",
     activities: [
-      "Desenvolvimento completo web services e micros serviços em NodeJs com ExpressJs, no padrão REST API, gRPC e GraphQL.",
-      "Desenvolvimento seguindo padrões arquiteturais como Hexagonal Architecture e SOLID. ",
-      "Criação de pipelines CI/CD e deploy de aplicações em ambiente Kubernetes.",
-      "Criação e modelagem de bancos de dados SQL e NoSQL e integrações.",
-      "Implantação de ferramentas de monitoramento e observabilidade das aplicações, com Grafana, Prometheus, Graylog e Istio.",
-      "Criação de aplicações com uso de filas de mensageira, como RabbitMQ.",
-      "Desenvolvimento de teste de unitários e de integração nas aplicações.",
+      "Criação de websites estáticos para lojas e divulgação com HTML, CSS e Js puros.",
+      "Modificações visuais em aplicações existentes.",
     ],
     startDate: "Janeiro 2020",
-    endDate: "Atualmente",
+    endDate: "Setembro 2021",
   },
 ];

@@ -10,57 +10,40 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
-import BannerImage from "../../../public/banner-image.png";
 
 export const Banner = () => {
   return (
-    <Container maxW={"full"} bg={useColorModeValue("gray.100", "gray.700")}>
+    <Container maxW={"full"}>
       <Container
         maxW={"container.xl"}
         textAlign={{ base: "center", lg: "left" }}
       >
-        <HStack
-          wrap={{
-            base: "wrap",
-            lg: "nowrap",
-          }}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-        >
-          <VStack gap={4} minW={"45%"} align={{ lg: "start" }}>
-            <Heading fontSize={"4xl"} fontWeight={"bold"}>
-              Hi There! <br />
-              👋 I’m Murilo Arelhano
+        <VStack gap={8} textAlign={"center"} py={"10"}>
+          <Heading
+            size={"2xl"}
+            fontWeight={"bold"}
+            bgGradient="linear(to-l, #A5008A, #00FFE0)"
+            bgClip="text"
+          >
+            Hi, I’m Murilo Arelhano
+            <Heading size={"2xl"} color={"white"}>
+              Full-stack Developer
             </Heading>
-            <Text>
-              I’m a Full-stack Web Developer, graduating in information system,
-              I have experience and study constantly web development with
-              NodeJs, ReactJs, Typescript, micro services, cloud infrastructure,
-              DevOps and information security.
-            </Text>
-            <HStack
-              gap={4}
-              wrap={{
-                base: "wrap",
-                md: "nowrap",
-              }}
-              justify={"center"}
-            >
-              <Link href="https://github.com/muriloarelhano">
-                <Button size={"lg"}>
-                  Go To Github{" "}
-                  <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
-                </Button>
-              </Link>
-            </HStack>
-          </VStack>
-          <Image
-            src={BannerImage.src}
-            alt=""
-            transform={"translateY(70px)"}
-            maxW={"2xl"}
-          />
-        </HStack>
+          </Heading>
+
+          <Text fontSize={"lg"} maxW={"container.sm"}>
+            I have experience with web development with NodeJs, ReactJs,
+            Typescript, micro services, cloud infrastructure, DevOps and
+            information security.
+          </Text>
+
+          <Link href="https://github.com/muriloarelhano">
+            <Button size={"lg"}>
+              Github{" "}
+              <BsGithub fontSize={"25px"} style={{ marginLeft: "8px" }} />
+            </Button>
+          </Link>
+        </VStack>
       </Container>
     </Container>
   );
