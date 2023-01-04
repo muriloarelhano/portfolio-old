@@ -4,7 +4,8 @@ import {
   HStack,
   IconButton,
   Link as ChakraLink,
-  Stack, useDisclosure
+  Stack,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
