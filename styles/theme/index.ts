@@ -3,13 +3,13 @@ import { ComponentThemes } from "./components";
 
 export const theme = extendTheme({
   styles: {
-    ...GlobalStyle,
-    global: {
-      svg: { display: "inline" },
-      body: {
-        bg: "111113",
+    global: (props: any) => ({
+      ...GlobalStyle,
+      "html, body": {
+        bg: "#121214",
+        color: "white",
       },
-    },
+    }),
   },
   components: {
     ...ComponentThemes,
