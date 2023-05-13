@@ -1,6 +1,6 @@
 import { Container, Heading, HStack } from "@chakra-ui/react";
 import React from "react";
-import { NavBar } from "../components/Menu";
+import { Menu } from "../components/Menu";
 
 export const Header: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
         <Heading size={"lg"} fontWeight={"medium"}>
           Murilo Arelhano
         </Heading>
-        <NavBar />
+        <Menu />
       </HStack>
     </Container>
   );

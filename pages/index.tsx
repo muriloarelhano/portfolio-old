@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <SocialMedia />
       <Skills />
       <Projects />
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };

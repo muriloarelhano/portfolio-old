@@ -4,6 +4,7 @@ import {
   chakra,
   Container,
   Heading,
+  HStack,
   Stack,
   Text,
   useColorModeValue,
@@ -11,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { NavBar } from "./Menu";
+import { Menu } from "./Menu";
 
 const SocialButton = ({
   children,
@@ -52,10 +53,12 @@ export default function Footer() {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <Heading size={"lg"}>Murilo Arelhano</Heading>
-        <NavBar />
-        <Stack direction={"row"} align={"center"} spacing={6}>
+        <HStack align={"flex-end"}>
+          <Heading size={"lg"}>Murilo Arelhano</Heading>
           <Text>© {new Date(Date.now()).getFullYear()}</Text>
+        </HStack>
+        <Menu />
+        <Stack direction={"row"} align={"center"} spacing={6}>
           <SocialButton
             label={"GitHub"}
             href={"https://github.com/muriloarelhano"}

@@ -18,16 +18,16 @@ const ResumePage: React.FC = () => {
           gridTemplateColumns={"3fr 1fr"}
           gap={1}
         >
-          <GridItem bg={"gray.900"} area={"header"} borderRadius={"base"}>
+          <GridItem bg={"gray.900"} area={"header"}>
             <ResumeHeader />
           </GridItem>
-          <GridItem bg={"gray.900"} area={"info"} borderRadius={"base"}>
+          <GridItem bg={"gray.900"} area={"info"}>
             <ResumeProfileInfos />
           </GridItem>
-          <GridItem bg={"gray.900"} area={"main"} borderRadius={"base"}>
+          <GridItem bg={"gray.900"} area={"main"}>
             <ResumeMainInfos />
           </GridItem>
-          <GridItem bg={"gray.900"} area={"nav"} borderRadius={"base"}>
+          <GridItem bg={"gray.900"} area={"nav"}>
             <ResumeSkills />
           </GridItem>
         </Grid>
