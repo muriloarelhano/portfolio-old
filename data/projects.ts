@@ -1,6 +1,6 @@
-import godevrel from "../../public/godevrel-print.png";
-import port from "../../public/portfolio.png";
-import { ProjectCardProps } from "../components/IndexPage/ProjectCard";
+import godevrel from "../public/godevrel-print.png";
+import port from "../public/portfolio.png";
+import { ProjectCardProps } from "../components/Root/ProjectCard";
 
 export const listOfProjects: ProjectCardProps[] = [
   {

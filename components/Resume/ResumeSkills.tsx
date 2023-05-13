@@ -1,10 +1,5 @@
-import {
-  Heading,
-  Link as ChakraLink,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/next-js";
+import { Heading, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { Skill, SkillProps } from "./Skill";
 
@@ -12,24 +7,22 @@ export const ResumeSkills: React.FC = () => {
   return (
     <VStack align={"start"} p={5} gap={5}>
       <VStack align={"start"}>
-        <Heading size={"lg"}>Links </Heading>
-        <Link href="/">
-          <ChakraLink color={useColorModeValue("blue.700", "blue.300")}>
-            Website
-          </ChakraLink>
+        <Text size={"lg"}>Links </Text>
+        <Link href="/" color={useColorModeValue("blue.700", "blue.300")}>
+          Website
         </Link>
-        <ChakraLink
+        <Link
           href="https://www.linkedin.com/in/muriloarelhano/"
           color={useColorModeValue("blue.700", "blue.300")}
         >
           LinkedIn
-        </ChakraLink>
-        <ChakraLink
+        </Link>
+        <Link
           href="https://github.com/muriloarelhano"
           color={useColorModeValue("blue.700", "blue.300")}
         >
           Github
-        </ChakraLink>
+        </Link>
       </VStack>
       <VStack align={"start"}>
         <Heading size={"lg"}>Competências</Heading>

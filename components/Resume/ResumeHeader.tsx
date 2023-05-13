@@ -1,15 +1,6 @@
-import {
-  Button,
-  Heading,
-  HStack,
-  Image,
-  Tag,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Heading, HStack, Image, Tag, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import { FaPrint } from "react-icons/fa";
-import MyFace from "../../../public/my-face.jpg";
+import MyFace from "../../public/my-face.jpg";
 
 export const ResumeHeader: React.FC = () => {
   return (

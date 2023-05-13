@@ -1,17 +1,17 @@
+"use client";
+import { Link } from "@chakra-ui/next-js";
 import {
   Box,
   Button,
-  chakra,
-  Container,
   Heading,
+  HStack,
   Stack,
-  Text,
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { NavBar } from "./Menu";
+import { Menu } from "./Menu";
 
 const SocialButton = ({
   children,
@@ -23,39 +23,42 @@ const SocialButton = ({
   href: string;
 }) => {
   return (
-    <Button
-      as={"a"}
-      href={href}
-      rounded={"full"}
-      transition={"background 0.3s ease"}
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </Button>
+    <Box>
+      <Link href={href}>
+        <Button
+          rounded={"full"}
+          transition={"background 0.3s ease"}
+          bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+        >
+          <VisuallyHidden>{label}</VisuallyHidden>
+          {children}
+        </Button>
+      </Link>
+    </Box>
   );
 };
 
 export default function Footer() {
   return (
-    <Box
+    <HStack
+      justify={"center"}
       borderTopWidth={"0.25px"}
       borderStyle={"solid"}
       borderColor={"#323238"}
     >
-      <Container
-        as={Stack}
-        maxW={"container.xl"}
+      <Stack
         py={4}
-        direction={{ base: "column", md: "row" }}
         spacing={4}
-        justify={{ base: "center", md: "space-between" }}
+        width={"100%"}
+        maxW={"container.xl"}
         align={{ base: "center", md: "center" }}
+        direction={{ base: "column", md: "row" }}
+        justify={{ base: "center", md: "space-between" }}
       >
         <Heading size={"lg"}>Murilo Arelhano</Heading>
-        <NavBar />
+
+        <Menu />
         <Stack direction={"row"} align={"center"} spacing={6}>
-          <Text>© {new Date(Date.now()).getFullYear()}</Text>
           <SocialButton
             label={"GitHub"}
             href={"https://github.com/muriloarelhano"}
@@ -69,7 +72,7 @@ export default function Footer() {
             <FaLinkedinIn />
           </SocialButton>
         </Stack>
-      </Container>
-    </Box>
+      </Stack>
+    </HStack>
   );
 }

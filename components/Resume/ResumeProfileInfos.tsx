@@ -1,5 +1,5 @@
-import { HStack, Link, Text } from "@chakra-ui/react";
 import React from "react";
+import { HStack, Link, Text } from "@chakra-ui/react";
 import { FaMailBulk, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 
 export const ResumeProfileInfos: React.FC = () => {
