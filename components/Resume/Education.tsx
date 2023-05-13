@@ -5,7 +5,7 @@ export interface EducationProps extends PropsWithChildren {
   title: string;
   startDate: string;
   endDate: string;
-  description: string;
+  description?: string;
 }
 
 export const Education: React.FC<EducationProps> = ({
@@ -16,11 +16,11 @@ export const Education: React.FC<EducationProps> = ({
 }) => {
   return (
     <Box>
-      <Heading size={"md"}>{title}</Heading>
       <Text fontSize={"sm"}>
         {startDate} - {endDate}
       </Text>
-      <Text>{description}</Text>
+      <Heading size={"md"}>{title}</Heading>
+      {description && <Text>{description}</Text>}
     </Box>
   );
 };

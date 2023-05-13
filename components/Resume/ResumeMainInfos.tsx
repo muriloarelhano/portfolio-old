@@ -48,19 +48,21 @@ export const ResumeMainInfos = () => {
 const EDUCATIONS: EducationProps[] = [
   {
     title: "Bacharelado, Universidade Federal de Mato Grosso do Sul",
-    description: "Sistemas de Infromação",
+    description: "Sistemas de Informação",
     startDate: "Janeiro 2019",
-    endDate: "Dezembro 2022",
+    endDate: "Julho 2023",
   },
 ];
 
 const EXPERIENCE: ExperienceProps[] = [
   {
-    title: "Desenvolvedor full-stack",
-    employer: "Callix",
-    activities: ["Desenvolvimento de aplicações web."],
-    startDate: "Setembro 2021",
-    endDate: "Atualmente",
+    title: "Freelancer Web Developer",
+    activities: [
+      "Criação de websites estáticos para lojas e divulgação com HTML, CSS e Js puros.",
+      "Modificações visuais em aplicações existentes.",
+    ],
+    startDate: "Janeiro 2020",
+    endDate: "Setembro 2021",
   },
   {
     title: "Desenvolvedor full-stack",
@@ -74,27 +76,14 @@ const EXPERIENCE: ExperienceProps[] = [
       "Criação de aplicações com uso de filas de mensageira, como RabbitMQ.",
       "Desenvolvimento de teste de unitários e de integração nas aplicações.",
     ],
-    startDate: "Janeiro 2020",
-    endDate: "Setembro 2021",
+    startDate: "Setembro 2021",
+    endDate: "Outubro 2022",
   },
   {
-    title: "Etag. Desenvolvedor full-stack",
-    employer: "Climatempo",
-    activities: [
-      "Criação de scripts do para automação em Python.",
-      "Correção de bugs em sistemas legados em PHP.",
-      "Desenvolvimento e correção de bugs em aplicações NodeJs.",
-    ],
-    startDate: "Janeiro 2021",
-    endDate: "Setembro 2021",
-  },
-  {
-    title: "Freelancer Web Developer",
-    activities: [
-      "Criação de websites estáticos para lojas e divulgação com HTML, CSS e Js puros.",
-      "Modificações visuais em aplicações existentes.",
-    ],
-    startDate: "Janeiro 2020",
-    endDate: "Setembro 2021",
+    title: "Desenvolvedor full-stack",
+    employer: "Callix",
+    activities: ["Desenvolvimento de aplicações full-stack em NodeJs/ReactJs com Typescript."],
+    startDate: "Setembro 2021",
+    endDate: "Atualmente",
   },
 ];
