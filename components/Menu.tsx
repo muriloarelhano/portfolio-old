@@ -9,11 +9,9 @@ export interface LinkType {
 }
 
 const NavLink: React.FC<LinkType> = ({ name, path }) => (
-  <Box>
-    <Link href={path}>
-      <Button variant={"ghost"}>{name}</Button>
-    </Link>
-  </Box>
+  <Link href={path}>
+    <Button variant={"ghost"}>{name}</Button>
+  </Link>
 );
 
 export const Menu = () => {

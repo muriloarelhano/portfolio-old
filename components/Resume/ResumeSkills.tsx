@@ -1,5 +1,5 @@
 import { Link } from "@chakra-ui/next-js";
-import { Heading, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import { Heading, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { Skill, SkillProps } from "./Skill";
 
@@ -7,22 +7,10 @@ export const ResumeSkills: React.FC = () => {
   return (
     <VStack align={"start"} p={5} gap={5}>
       <VStack align={"start"}>
-        <Text size={"lg"}>Links </Text>
-        <Link href="/" color={useColorModeValue("blue.700", "blue.300")}>
-          Website
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/muriloarelhano/"
-          color={useColorModeValue("blue.700", "blue.300")}
-        >
-          LinkedIn
-        </Link>
-        <Link
-          href="https://github.com/muriloarelhano"
-          color={useColorModeValue("blue.700", "blue.300")}
-        >
-          Github
-        </Link>
+        <Heading size={"lg"}>Social</Heading>
+        <Link href="/">Website</Link>
+        <Link href="https://www.linkedin.com/in/muriloarelhano/">LinkedIn</Link>
+        <Link href="https://github.com/muriloarelhano">Github</Link>
       </VStack>
       <VStack align={"start"}>
         <Heading size={"lg"}>Competências</Heading>

@@ -16,11 +16,10 @@ export const SkillCard: React.FunctionComponent<SkillCardProps> = ({
 }) => {
   return (
     <HStack
-      align={"center"}
-      bg={"#121214"}
-      border={"solid 0.25px #323238"}
       p={6}
       rounded={"md"}
+      align={"center"}
+      border={"solid 0.25px #323238"}
     >
       <Box color={color} mr={"2"}>
         <Icon size={45} />

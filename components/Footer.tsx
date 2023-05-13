@@ -6,7 +6,6 @@ import {
   Heading,
   HStack,
   Stack,
-  useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
@@ -25,11 +24,7 @@ const SocialButton = ({
   return (
     <Box>
       <Link href={href}>
-        <Button
-          rounded={"full"}
-          transition={"background 0.3s ease"}
-          bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-        >
+        <Button rounded={"full"} transition={"background 0.3s ease"}>
           <VisuallyHidden>{label}</VisuallyHidden>
           {children}
         </Button>
@@ -58,7 +53,7 @@ export default function Footer() {
         <Heading size={"lg"}>Murilo Arelhano</Heading>
 
         <Menu />
-        <Stack direction={"row"} align={"center"} spacing={6}>
+        <Stack direction={"row"} align={"center"} spacing={2}>
           <SocialButton
             label={"GitHub"}
             href={"https://github.com/muriloarelhano"}
