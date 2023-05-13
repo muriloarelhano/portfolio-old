@@ -1,7 +1,7 @@
+"use client"
 import {
   Box,
   Button,
-  chakra,
   Container,
   Heading,
   HStack,

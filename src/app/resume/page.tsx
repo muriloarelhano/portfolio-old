@@ -1,12 +1,12 @@
+import Footer from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { ResumeHeader } from "@/components/ResumePage/ResumeHeader";
+import { ResumeMainInfos } from "@/components/ResumePage/ResumeMainInfos";
+import { ResumeProfileInfos } from "@/components/ResumePage/ResumeProfileInfos";
+import { ResumeSkills } from "@/components/ResumePage/ResumeSkills";
 import { Container, Grid, GridItem } from "@chakra-ui/react";
-import Footer from "../src/components/Footer";
-import { Header } from "../src/components/Header";
-import { ResumeHeader } from "../src/components/ResumePage/ResumeHeader";
-import { ResumeMainInfos } from "../src/components/ResumePage/ResumeMainInfos";
-import { ResumeProfileInfos } from "../src/components/ResumePage/ResumeProfileInfos";
-import { ResumeSkills } from "../src/components/ResumePage/ResumeSkills";
 
-const ResumePage: React.FC = () => {
+export default function Resume() {
   return (
     <>
       <Header />
@@ -35,6 +35,4 @@ const ResumePage: React.FC = () => {
       <Footer />
     </>
   );
-};
-
-export default ResumePage;
+}
