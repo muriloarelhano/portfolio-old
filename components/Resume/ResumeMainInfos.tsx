@@ -8,12 +8,11 @@ export const ResumeMainInfos = () => {
     <VStack align={"start"} p={5} gap={2}>
       <Heading size={"lg"}>Perfil</Heading>
       <Text size={"lg"}>
-        Sou desenvolvedor full-stack, formado em sistema de informação, tenho
-        experiência com NodeJs, React e Typescript, além de várias outras
-        ferramentas conhecidas no mercado e outras linguagens como GO e .Net,
-        estou trabalhando com o desenvolvimento microsserviços, infraestrutura
-        em nuvem e DevOps, também gosto e estudo sobre outras áreas como
-        segurança e desenvolvimento de games.
+        Sou bacharel em Sistemas de Informação, tenho experiência principalmente
+        com plataforma NodeJs com Typescript, além de algumas outras linguagens,
+        como Go e .Net/C#. Trabalho com desenvolvimento de microsserviços e
+        aplicações web no geral, também estudo bastante sobre outras áreas como
+        segurança da informação, DevOps e desenvolvimento de games.
       </Text>
 
       <Divider></Divider>

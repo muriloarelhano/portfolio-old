@@ -9,7 +9,7 @@ export const Projects = () => {
         maxW={"container.xl"}
         textAlign={{ base: "center", lg: "left" }}
       >
-        <Heading mb={8}>Projects</Heading>
+        <Heading mb={8}>Personal Projects</Heading>
         <Grid
           gridTemplateColumns={"repeat(auto-fill, minmax(300px, 350px))"}
           gap={8}
