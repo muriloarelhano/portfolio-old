@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   chakra,
   Container,
   Heading,
@@ -22,31 +23,26 @@ const SocialButton = ({
   href: string;
 }) => {
   return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
+    <Button
       as={"a"}
       href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
+      rounded={"full"}
       transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
+      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
-    </chakra.button>
+    </Button>
   );
 };
 
 export default function Footer() {
   return (
-    <Box borderTopWidth={"0.25px"} borderStyle={"solid"} borderColor={"#323238"}>
+    <Box
+      borderTopWidth={"0.25px"}
+      borderStyle={"solid"}
+      borderColor={"#323238"}
+    >
       <Container
         as={Stack}
         maxW={"container.xl"}
