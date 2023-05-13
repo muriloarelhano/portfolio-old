@@ -3,17 +3,18 @@ import { SiGo, SiNextdotjs, SiTypescript } from "react-icons/si";
 
 export const skills = [
   {
-    title: "Typescript",
-    description: "Typescript is my main language",
-    color: "blue.400",
-    Icon: SiTypescript,
-  },
-  {
     title: "NodeJs",
     description: "3 years of experience with NodeJs",
     color: "green",
     Icon: FaNodeJs,
   },
+  {
+    title: "Typescript",
+    description: "Typescript is my main language",
+    color: "blue.400",
+    Icon: SiTypescript,
+  },
+
   {
     title: "ReactJS",
     description: "2 years of experience with React",

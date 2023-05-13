@@ -15,7 +15,7 @@ export const Skills = () => {
           <SkillCard
             key={skill.title}
             title={skill.title}
-            description={skill.description}
+            // description={skill.description}
             color={skill.color}
             Icon={skill.Icon}
           />

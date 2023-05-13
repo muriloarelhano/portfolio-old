@@ -3,16 +3,16 @@ import { IconType } from "react-icons/lib";
 
 interface SkillCardProps {
   title: string;
-  description: string;
   color: any;
+  description?: string;
   Icon: IconType;
 }
 
 export const SkillCard: React.FunctionComponent<SkillCardProps> = ({
   title,
-  description,
   color,
   Icon,
+  description,
 }) => {
   return (
     <HStack
@@ -27,7 +27,7 @@ export const SkillCard: React.FunctionComponent<SkillCardProps> = ({
       </Box>
       <VStack align={"start"}>
         <Heading size={"md"}>{title}</Heading>
-        <Text>{description}</Text>
+        {description && <Text>{description}</Text>}
       </VStack>
     </HStack>
   );

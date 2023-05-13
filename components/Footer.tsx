@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import {
   Box,
   Button,
   Container,
   Heading,
   HStack,
+  Link,
   Stack,
   Text,
   useColorModeValue,
@@ -24,16 +25,16 @@ const SocialButton = ({
   href: string;
 }) => {
   return (
-    <Button
-      as={"a"}
-      href={href}
-      rounded={"full"}
-      transition={"background 0.3s ease"}
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </Button>
+    <Link href={href}>
+      <Button
+        rounded={"full"}
+        transition={"background 0.3s ease"}
+        bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+      >
+        <VisuallyHidden>{label}</VisuallyHidden>
+        {children}
+      </Button>
+    </Link>
   );
 };
 

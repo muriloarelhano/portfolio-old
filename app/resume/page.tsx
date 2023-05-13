@@ -1,10 +1,11 @@
-import Footer from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { ResumeHeader } from "@/components/ResumePage/ResumeHeader";
-import { ResumeMainInfos } from "@/components/ResumePage/ResumeMainInfos";
-import { ResumeProfileInfos } from "@/components/ResumePage/ResumeProfileInfos";
-import { ResumeSkills } from "@/components/ResumePage/ResumeSkills";
+"use client"
 import { Container, Grid, GridItem } from "@chakra-ui/react";
+import Footer from "../../components/Footer";
+import { Header } from "../../components/Header";
+import { ResumeHeader } from "../../components/Resume/ResumeHeader";
+import { ResumeMainInfos } from "../../components/Resume/ResumeMainInfos";
+import { ResumeProfileInfos } from "../../components/Resume/ResumeProfileInfos";
+import { ResumeSkills } from "../../components/Resume/ResumeSkills";
 
 export default function Resume() {
   return (

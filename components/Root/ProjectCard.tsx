@@ -1,11 +1,6 @@
-import {
-  Heading,
-  Image,
-  Text,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
+import { Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation'
 import React from "react";
 
 export interface ProjectCardProps {
@@ -23,6 +18,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   imageSrc,
   alt,
 }) => {
+
+  const router = useRouter()
+
   return (
     <VStack
       as={motion.div}
@@ -32,7 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         shadow: "lg",
       }}
       onClick={() => {
-        window.location.href = pageLink;
+        router.replace(pageLink) ;
       }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 1 }}

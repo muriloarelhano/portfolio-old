@@ -1,6 +1,6 @@
-import { Container, Heading, HStack } from "@chakra-ui/react";
 import React from "react";
-import { Menu } from "../components/Menu";
+import { Menu } from "./Menu";
+import { Container, Heading, HStack } from "@chakra-ui/react";
 
 export const Header: React.FC = () => {
   return (
