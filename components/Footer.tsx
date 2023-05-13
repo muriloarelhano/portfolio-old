@@ -1,13 +1,11 @@
 "use client";
+import { Link } from "@chakra-ui/next-js";
 import {
   Box,
   Button,
-  Container,
   Heading,
   HStack,
-  Link,
   Stack,
-  Text,
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
@@ -25,39 +23,40 @@ const SocialButton = ({
   href: string;
 }) => {
   return (
-    <Link href={href}>
-      <Button
-        rounded={"full"}
-        transition={"background 0.3s ease"}
-        bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      >
-        <VisuallyHidden>{label}</VisuallyHidden>
-        {children}
-      </Button>
-    </Link>
+    <Box>
+      <Link href={href}>
+        <Button
+          rounded={"full"}
+          transition={"background 0.3s ease"}
+          bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+        >
+          <VisuallyHidden>{label}</VisuallyHidden>
+          {children}
+        </Button>
+      </Link>
+    </Box>
   );
 };
 
 export default function Footer() {
   return (
-    <Box
+    <HStack
+      justify={"center"}
       borderTopWidth={"0.25px"}
       borderStyle={"solid"}
       borderColor={"#323238"}
     >
-      <Container
-        as={Stack}
-        maxW={"container.xl"}
+      <Stack
         py={4}
-        direction={{ base: "column", md: "row" }}
         spacing={4}
-        justify={{ base: "center", md: "space-between" }}
+        width={"100%"}
+        maxW={"container.xl"}
         align={{ base: "center", md: "center" }}
+        direction={{ base: "column", md: "row" }}
+        justify={{ base: "center", md: "space-between" }}
       >
-        <HStack align={"flex-end"}>
-          <Heading size={"lg"}>Murilo Arelhano</Heading>
-          <Text>© {new Date(Date.now()).getFullYear()}</Text>
-        </HStack>
+        <Heading size={"lg"}>Murilo Arelhano</Heading>
+
         <Menu />
         <Stack direction={"row"} align={"center"} spacing={6}>
           <SocialButton
@@ -73,7 +72,7 @@ export default function Footer() {
             <FaLinkedinIn />
           </SocialButton>
         </Stack>
-      </Container>
-    </Box>
+      </Stack>
+    </HStack>
   );
 }
